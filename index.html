@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container mt-4 p-4 shadow-lg rounded form-container">
+
+    <h3 class="text-center mb-4">Registration Form</h3>
+
+    <form id="mainForm">
+
+        <!-- NAME -->
+        <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" 
+       pattern="[A-Za-z ]+" maxlength="30"
+       required placeholder="Enter your name">
+
+        </div>
+
+        <!-- CONTACT -->
+        <div class="form-row">
+            <label for="contact">Contact</label>
+
+            <div class="input-group">
+                <select id="countryCode" class="form-select" style="max-width: 90px;">
+                    <option value="+91">+91</option>
+                    <option value="+1">+1</option>
+                    <option value="+44">+44</option>
+                    <option value="+61">+61</option>
+                </select>
+
+                <input type="text" id="contact" maxlength="10" class="form-control"
+                       placeholder="10-digit number" required>
+            </div>
+        </div>
+
+       <!-- DOJ -->
+<div class="form-group mb-3">
+    <label for="doj" class="form-label">Date of Joining</label>
+    <input type="date" id="doj" class="form-control" required>
+</div>
+
+
+        <!-- GENDER -->
+        <div class="form-row">
+            <label>Gender</label>
+
+            <div class="d-flex gap-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" value="Male" required>
+                    <label class="form-check-label">Male</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" value="Female">
+                    <label class="form-check-label">Female</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" value="Other">
+                    <label class="form-check-label">Other</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control"
+       pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+       placeholder="Enter your Gmail ID (example@gmail.com)" required>
+            
+        </div>
+
+
+       <!-- SUBMIT -->
+<div class="text-center mt-4">
+    <button type="submit" class="btn btn-primary px-4">Submit</button>
+</div>
+
+
+    </form>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="bootstrap/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
